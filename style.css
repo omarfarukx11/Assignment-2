@@ -10,6 +10,7 @@ body{
     width: 80%;
     margin: 50px auto;
     border: 2px solid ;
+    box-sizing: border-box;
 }
 
 .inter {
@@ -23,6 +24,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .navbar{
@@ -41,11 +44,58 @@ nav{
    
 }
 
+
+/* main  */
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 50px auto;
+    box-sizing: border-box;
+    width: 90%;
+    border: 3px solid;
+}
+.title-paragraph{
+    width: 50%;
+    box-sizing: border-box;
+}
+.title-paragraph h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.title-paragraph p{
+    font-weight: 200;
+}
+.hero-img{
+    width: 50%;
+}
+.hero-img img{
+    width: 100%;
+}
+
+
 @media screen and (max-width:576px) {
     .navbar ul{
    display: none;
 }
 .logo img{
     width: 50%;
+}
+.hero-section{
+    flex-direction: column-reverse;
+    align-items: normal;
+    gap:40px ;
+}
+.title-paragraph{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.title-paragraph h1{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.hero-img{
+    width: 100%;
 }
 }
