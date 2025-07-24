@@ -8,7 +8,6 @@
 body {
   max-width: 1440px;
   margin: 50px auto;
-  border: 2px solid;
   box-sizing: border-box;
   background-color: #f5f8ff;
 }
@@ -33,15 +32,18 @@ nav {
   gap: 30px;
   justify-content: center;
   text-align: center;
-  cursor: pointer;
 }
 .navbar ul {
   display: flex;
   gap: 30px;
 }
-.navbar li {
+.navbar li,a {
   list-style: none;
+  color: black;
+  text-decoration: none;
+
 }
+
 
 /* main  */
 .hero-section {
@@ -278,7 +280,7 @@ position: relative;
     color: white;
     height: 500px;
     width: 100%;
-    margin: 100px auto;
+    margin: 100px auto 0 auto;
     background-image: url(assets/news-letter-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -319,10 +321,48 @@ button:hover{
   
 }
 
+/* footer  */
+footer{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 50px;
 
+}
 
-
-
+.footer-nav ul{
+display: grid;
+grid-template-columns: repeat(2 , 1fr);
+gap:30px 150px;
+font-size: 1.5rem;
+font-weight: 300;
+}
+.footer-nav li,a{
+  list-style: none;
+  color: black;
+  text-decoration: none;
+  text-transform: none;
+}
+.footer-logo-title {
+ width: 30%;
+}
+.footer-logo-title p {
+ margin-top: 20px;
+ font-weight: 300;
+ font-size: 20px;
+}
+.social-icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+.social-icon img{
+  width: 50px;;
+}
 
 @media screen and (max-width: 576px) {
   body {
@@ -426,9 +466,23 @@ button:hover{
   width: 60%;
 
 }
+
+
 .input-section button{
   padding: 20px 0px;
   width: 35%;
+}
+footer{
+flex-direction: column;
+padding: 50px 20px;
+}
+
+.footer-nav ul{
+grid-template-columns:1fr;
+gap:40px;
+}
+.footer-logo-title {
+ width: 100%;
 }
 }
 
@@ -478,7 +532,7 @@ button:hover{
   .flower-store {
     width: 100%;
   }
-    .deals-img-container {
+  .deals-img-container {
   display: grid;
   grid-template-areas:
     "one "
@@ -529,8 +583,19 @@ button:hover{
   padding: 20px 0px;
   width: 35%;
 }
-}
 
+footer{
+flex-direction: column;
+padding: 50px 20px;
+}
+.footer-nav ul{
+grid-template-columns:1fr;
+gap:40px;
+}
+.footer-logo-title {
+ width: 100%;
+}
+}
 
 @media screen and (min-width: 992px) and (max-width: 1140px) {
   .trusted-img img {
