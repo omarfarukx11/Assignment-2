@@ -104,6 +104,7 @@ nav {
 .card-title {
   font-size: 1.5rem;
   padding: 30px;
+  font-weight: bold;
 }
 .card button {
   font-family: "Inter", sans-serif;
@@ -488,6 +489,9 @@ gap:40px;
 }
 .footer-logo-title img{
   width: 50%;
+}
+.card-title {
+  font-size: 1rem;
 }
 }
 
