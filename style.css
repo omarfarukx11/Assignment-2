@@ -158,19 +158,24 @@ nav {
   font-weight: 300;
 }
 
+
+
+
+
+
+
 /* latest deals section */
 .latest-deals {
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
-  border: 2px solid;
+
 }
 .latest-deals h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 .latest-deals p {
-  /* padding: 0px 300px; */
   font-weight: 300;
 }
 .deals-details {
@@ -180,32 +185,28 @@ nav {
 .deals-details p{
  padding: 0px 300px;
 }
-.deal-img {
-    position: relative;
 
-}
-
-.deals-img img {
-  border-radius: 15px;
-  width: 100%;
-  
-}
-
-.deal-img-one {
+.deal-img-one-container {
 position: relative;
   grid-area: one;
 }
+.deal-img-two-container {
+ position: relative;
+  grid-area: two;
+}
+.deal-img-three-container {
+ position: relative;
+  grid-area: three;
+  
+}
+
 .deals-offer-one{
     position: absolute;
     top: 30%;
     color: white;
     text-align: center;
     left: 10%;
-}
-
-.deal-img-two {
- position: relative;
-  grid-area: two;
+    z-index: 3;
 }
 .deals-offer-two{
     position: absolute;
@@ -213,11 +214,7 @@ position: relative;
     color: white;
     text-align: center;
    left: 10%;
-}
-.deal-img-three {
- position: relative;
-  grid-area: three;
-  
+   z-index: 10;
 }
 .deals-offer-three{
     position: absolute;
@@ -225,30 +222,91 @@ position: relative;
     color: white;
     text-align: center;
     left: 30%;
+    z-index: 10;
 }
 
-.deals-img {
+.deals-img-container {
   display: grid;
   grid-template-areas:
     "one three three "
     "two three three ";
   gap: 20px 30px;
 }
-
-
-.deals-img a{
+.deals-img-container img {
+  border-radius: 15px;
+  width: 100%;
+}
+.deals-img-container a{
     text-decoration: underline;
     color: white;
     cursor: pointer;
     font-size: 1.2rem;
+    font-weight: bold;
 
 
 }
- .deals-img p{
+ .deals-img-container p{
     font-size: 2rem;
     margin-bottom: 10px;
+    font-weight: bold;
 
 }
+
+.img-container{
+position: relative;
+}
+.overly{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  border-radius: 20px;
+
+}
+
+
+/* join section */
+.join-section{
+  text-align: center;
+  width: 90%;
+  margin: 100px auto;
+  border: 4px solid;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.join-bg-img img{
+  width: 100%;
+}
+.input-section{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 35%;
+  left: 40%;
+  
+
+
+}
+.input-section input{
+  padding: 40px;
+  border: none;
+  outline: none;
+}
+.input-section button{
+  padding: 40px;
+  border: none;
+  background-color: #e95a08;
+}
+
+
+
+
+
 
 @media screen and (max-width: 576px) {
   body {
@@ -304,7 +362,7 @@ position: relative;
   .plant-lover-details ul {
     font-size: 1.2rem;
   }
-  .deals-img {
+  .deals-img-container {
   display: grid;
   grid-template-areas:
     "one "
@@ -327,7 +385,7 @@ position: relative;
 .deals-details p{
  padding: 0px;
 }
-.deals-img a{
+.deals-img-container a{
     text-decoration: underline;
     color: white;
     cursor: pointer;
@@ -335,15 +393,12 @@ position: relative;
 
 
 }
- .deals-img p{
+ .deals-img-container p{
     font-size: 1.5rem;
     margin-bottom: 10px;
 
 }
 }
-
-
-
 
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -391,7 +446,7 @@ position: relative;
   .flower-store {
     width: 100%;
   }
-    .deals-img {
+    .deals-img-container {
   display: grid;
   grid-template-areas:
     "one "
@@ -401,20 +456,19 @@ position: relative;
 }
 .deals-offer-one{
     top: 40%;
-    left: 20%;
+    left: 30%;
 }
 .deals-offer-two{
     top: 40%;
-    left: 20%;
+    left: 30%;
 }
 .deals-offer-three{
     top: 40%;
-    left: 20%;
 }
 .deals-details p{
  padding: 0px;
 }
-.deals-img a{
+.deals-img-container a{
     text-decoration: underline;
     color: white;
     cursor: pointer;
@@ -422,12 +476,13 @@ position: relative;
 
 
 }
- .deals-img p{
+ .deals-img-container p{
     font-size: 1.5rem;
     margin-bottom: 10px;
 
 }
 }
+
 
 @media screen and (min-width: 992px) and (max-width: 1140px) {
   .trusted-img img {
@@ -438,8 +493,42 @@ position: relative;
     bottom: 500px;
     left: 22%;
   }
+      .deals-img-container {
+  display: grid;
+  grid-template-areas:
+    "one "
+    "two "
+    "three ";
+  gap: 20px 30px;
+}
+.deals-offer-one{
+    top: 40%;
+    left: 40%;
+}
+.deals-offer-two{
+    top: 40%;
+    left: 40%;
+}
+.deals-offer-three{
+    top: 50%;
+    left: 40%;
+}
+.deals-details p{
+ padding: 0px;
+}
+.deals-img-container a{
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+ .deals-img-container p{
+    font-size: 2rem;
+    margin-bottom: 10px;
 
 }
+}
+
 @media screen and (min-width: 1140px) and (max-width: 1300px) {
   .trusted-img img {
     width: 400px;
