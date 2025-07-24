@@ -400,6 +400,9 @@ font-weight: 300;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .card button {
+  font-size: 1rem;
+}
   .trusted-img {
     display: none;
   }
