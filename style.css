@@ -237,14 +237,13 @@ position: relative;
 .deals-img-container img {
   border-radius: 15px;
   width: 100%;
-}
-.deals-img-container a{
-    text-decoration: underline;
+} 
+.a-tag{
+    text-decoration:none;
     color: white;
-    cursor: pointer;
     font-size: 1.2rem;
     font-weight: bold;
-
+    border-bottom: 2px solid white;
 
 }
  .deals-img-container p{
@@ -321,6 +320,7 @@ button:hover{
   
 }
 
+
 /* footer  */
 footer{
   width: 100%;
@@ -354,6 +354,7 @@ font-weight: 300;
  font-weight: 300;
  font-size: 20px;
 }
+
 .social-icon{
   display: flex;
   justify-content: space-between;
@@ -484,8 +485,10 @@ gap:40px;
 .footer-logo-title {
  width: 100%;
 }
+.footer-logo-title img{
+  width: 50%;
 }
-
+}
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .plants-card-container {
